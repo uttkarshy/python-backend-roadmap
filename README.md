@@ -38,7 +38,7 @@ Every project in this repository is built from scratch as part of my structured 
 | 03_functions | Functions Practice |
 | 04_lists | List Projects |
 | 05_dictionaries | Dictionary Practice |
-| 06_student_information_system | CRUD Console Project |
+
 
 More projects will be added as I progress.
 
