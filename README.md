@@ -65,3 +65,11 @@ Future additions:
 ## Goal
 
 Build production-ready AI Backend applications and Retrieval-Augmented Generation (RAG) systems.
+
+## Learning Journey
+
+This repository is continuously updated as I progress through my Python Backend Roadmap.
+
+Every project reflects my current knowledge at the time it was built.
+
+As I learn new concepts, existing projects will be improved with better architecture and additional features.
