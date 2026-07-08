@@ -1,34 +1,29 @@
 """
 =========================================================
-Project    : Attendance System
+Project    : Shopping List Manager
 Author     : Utkarsh Yadav
 Repository : python-backend-roadmap
 
 Description:
-A console-based attendance management system.
+A simple shopping list manager using Python lists.
 
 Concepts Used:
 - Lists
-- Loops
 - Functions
+- Loops
+- if / elif / else
 =========================================================
 """
 
-attendance = []
+shopping_list = []
 
 
 def menu():
-
-    print("\n========== Attendance System ==========")
-
-    print("1. Mark Present")
-
-    print("2. View Attendance")
-
-    print("3. Search Student")
-
-    print("4. Count Students")
-
+    print("\n========== Shopping List ==========")
+    print("1. View Items")
+    print("2. Add Item")
+    print("3. Remove Item")
+    print("4. Count Items")
     print("5. Exit")
 
 
@@ -40,55 +35,50 @@ while True:
 
     if choice == "1":
 
-        student = input("Enter Student Name: ")
+        if len(shopping_list) == 0:
+            print("Shopping list is empty.")
 
-        attendance.append(student)
+        else:
 
-        print("Attendance marked.")
+            print("\nShopping Items")
+
+            count = 1
+
+            for item in shopping_list:
+
+                print(count, ".", item)
+
+                count = count + 1
 
     elif choice == "2":
 
-        if len(attendance) == 0:
+        item = input("Enter item name: ")
 
-            print("No attendance found.")
+        shopping_list.append(item)
 
-        else:
-
-            print("\nPresent Students")
-
-            for student in attendance:
-
-                print(student)
+        print("Item added successfully.")
 
     elif choice == "3":
 
-        search = input("Enter Student Name: ")
+        item = input("Enter item name to remove: ")
 
-        found = False
+        if item in shopping_list:
 
-        for student in attendance:
+            shopping_list.remove(item)
 
-            if student == search:
-
-                found = True
-
-                break
-
-        if found:
-
-            print("Student is Present.")
+            print("Item removed successfully.")
 
         else:
 
-            print("Student Not Found.")
+            print("Item not found.")
 
     elif choice == "4":
 
-        print("Total Present Students :", len(attendance))
+        print("Total Items :", len(shopping_list))
 
     elif choice == "5":
 
-        print("Closing Attendance System.")
+        print("Closing Shopping List.")
 
         break
 
