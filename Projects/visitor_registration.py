@@ -22,22 +22,25 @@ while True:
             visitors.add(name)
             print("Visitor registered successfully.")
     elif choice == 2:
-        print("Registered Visitors:")
-        for visitor in visitors:
-            print(visitor)
+        if len(visitors) == 0:
+            print("No visitors registered.")
+        else:
+            print("Registered Visitors:")
+            for visitor in visitors:
+                print(visitor)
     elif choice==3:
         name=input("Enter visitor name to search: ")
         if name in visitors:
-            print(name +" is registered.")
+            print(name, "is registered.")
         else:
-            print(name +" is not registered.")
+            print(name, "is not registered.")
     elif choice==4:
         name=input("Enter visitor name to remove: ")
         if name in visitors:
             visitors.remove(name)
-            print(name +" removed successfully.")
+            print(name, "removed successfully.")
         else:
-            print(name +" is not registered.")
+            print(name, "is not registered.")
     elif choice==5:
         print("Total Visitors:", len(visitors))
     elif choice==6:
